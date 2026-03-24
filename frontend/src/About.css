@@ -1,0 +1,208 @@
+/* About Section Base */
+.about {
+  background-color: #ffffff; /* fully solid white */
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+}
+
+/* Remove any decorative background circles */
+.about::before {
+  display: none; /* ensures no circles or grid show */
+}
+
+/* Container */
+.about .container {
+  position: relative;
+  z-index: 2; /* above any background */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1c284b; /* dark blue */
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #374151; /* opaque dark gray */
+}
+
+/* Grid setup */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-grid.narrow {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Cards */
+.about-card {
+  background-color: #ffffff; /* fully opaque white */
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Card header */
+.about-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.about-card h3::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: #3b82f6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2px;
+}
+
+/* Text and lists */
+.about-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-list {
+  padding-left: 1.5rem;
+  color: #4b5563;
+}
+
+.about-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.about-list li::marker {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.about-list.two-col {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.about-list.two-col li::before {
+  content: '▸';
+  color: #3b82f6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* CTA Section */
+.about-cta {
+  text-align: center;
+  margin-top: 4rem;
+  background-color: #ffffff; /* fully opaque white */
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.about-cta h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1e40af; /* solid blue */
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.about-cta .cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about-cta .cta-actions .btn {
+  min-width: 220px;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  background-color: #1e40af; /* solid primary blue */
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.about-cta .cta-actions .btn:hover {
+  transform: translateY(-3px);
+  background-color: #3b82f6; /* lighter blue on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-grid.narrow {
+    grid-template-columns: 1fr;
+  }
+
+  .about-list.two-col {
+    columns: 1;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-cta .cta-actions {
+    flex-direction: column;
+  }
+
+  .about-cta .cta-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
