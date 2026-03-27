@@ -26,6 +26,21 @@ It allows users to track their learning, manage revision schedules, and improve 
 
 ---
 
+## 🎯 Project Goals
+
+- Improve long-term retention of algorithms using structured revision
+- Help users build a consistent learning habit
+- Provide a simple and efficient platform for tracking progress
+- Reduce forgetting through repeated exposure
+
+---
+
+## 🏗️ System Design
+
+AlgoCycle follows a client-server architecture where the React frontend communicates with a Node.js/Express backend, and MongoDB is used for persistent data storage.
+
+---
+
 ## 🛠️ Tech Stack
 
 **Frontend**
