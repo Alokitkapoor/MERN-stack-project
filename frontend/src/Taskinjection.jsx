@@ -60,7 +60,7 @@ const Cds = ({ tasks, fetchAndRenderTasks }) => {
       {toshow.length === 0 && (
         <>
           <img
-            src="src/assets/empty-box.png"
+            src="./assets/empty-box.png"
             style={{
               padding: "3vw",
               marginTop: "3vw",
