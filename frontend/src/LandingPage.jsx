@@ -63,7 +63,7 @@ const LandingPage = () => {
     }
 
     try {
-      const res = await fetch("http://mern-stack-project-w5dd.onrender.com/api/auth/signup", {
+      const res = await fetch("https://mern-stack-project-w5dd.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, username, password }),
@@ -101,7 +101,7 @@ const LandingPage = () => {
     if (!username || !password) return alert("Please enter all details");
 
     try {
-      const res = await fetch("http://mern-stack-project-w5dd.onrender.com/api/auth/login", {
+      const res = await fetch("https://mern-stack-project-w5dd.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: username, password }), // backend login uses email
