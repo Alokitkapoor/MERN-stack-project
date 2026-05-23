@@ -126,7 +126,7 @@ const MainPage = () => {
         if (!token) return;
 
         try {
-            const res = await fetch("http://localhost:5000/api/problems", {
+            const res = await fetch("http://mern-stack-project-w5dd.onrender.com/api/problems", {
                 headers: { "Authorization": `Bearer ${token}` }
             });
             if (!res.ok) throw new Error("Failed to fetch");
@@ -151,7 +151,7 @@ const MainPage = () => {
 
         const token = localStorage.getItem("token");
         try {
-            const res = await fetch("http://localhost:5000/api/problems", {
+            const res = await fetch("http://mern-stack-project-w5dd.onrender.com/api/problems", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

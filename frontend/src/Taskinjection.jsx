@@ -28,7 +28,7 @@ const Cds = ({ tasks, fetchAndRenderTasks }) => {
 
       // API call to delete task from backend
       const res = await fetch(
-        `http://localhost:5000/api/problems/${taskToRemove._id}`,
+        `http://mern-stack-project-w5dd.onrender.com/api/problems/${taskToRemove._id}`,
         {
           method: "DELETE",
           headers: {
