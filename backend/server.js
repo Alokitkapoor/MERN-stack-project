@@ -18,7 +18,7 @@ const startServer = async () => {
 
     const app = express();
     app.use(cors({
-        origin: 'http://localhost:5173', // frontend URL
+        origin: 'http://mern-stack-project-tau-six.vercel.app', // frontend URL
         methods: ['GET','POST','PUT','DELETE'], // allowed methods
         credentials: true // if you use cookies or auth headers
     }));
