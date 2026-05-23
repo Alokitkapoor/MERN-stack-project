@@ -17,11 +17,12 @@ const startServer = async () => {
     console.log("Database connected, starting server...");
 
     const app = express();
-    app.use(cors({
-        origin: 'https://mern-stack-project-tau-six.vercel.app', // frontend URL
-        methods: ['GET','POST','PUT','DELETE'], // allowed methods
-        credentials: true // if you use cookies or auth headers
-    }));
+    // app.use(cors({
+    //     origin: 'https://mern-stack-project-tau-six.vercel.app', // frontend URL
+    //     methods: ['GET','POST','PUT','DELETE'], // allowed methods
+    //     credentials: true // if you use cookies or auth headers
+    // }));
+    app.use(cors());
     app.use(express.json());
 
     // Routes
